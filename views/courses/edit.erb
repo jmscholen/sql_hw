@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Courses::Edit</title>
+</head>
+<body>
+
+  <h2>Edit Courses:</h2>
+         		<form action="/courses/#{:id}/edit" method="post">
+	         			<input type="hidden" name="_method" value="put">
+	              		<input type="text" id="updated_course.name" name="updated_course[name]" placeholder="<%= @updated_course.name %>">
+	              		<input type="text" id="updated_course_subject_id" name="@updated_course[id]" placeholder="<%= @updated_course.id %>">
+	              		<input type="submit">
+           		</form>
+</body>
+</html>

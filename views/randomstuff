@@ -1,0 +1,9 @@
+randomstuff
+
+
+
+pulled form subjects/index
+<!--  - <%= professor.name.where(professor.subject_id = subject.id) %> -->	
+
+pulled form professor/index
+<!--  <%= subject.name.where(professor.subject_id = subject.id) %>-->

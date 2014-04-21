@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Professors::Edit</title>
+</head>
+<body>
+
+  <h2>Edit Professor:</h2>
+         		<form action="/professors/#{:id}/edit" method="post">
+	         			<input type="hidden" name="_method" value="put">
+	              		<input type="text" id="updated_professor.name" name="updated_professor[name]" value="<%= @updated_professor.name %>">
+	              		<input type="text" id="updated_professor_subject_id" name="updated_professor[id]" value="<%= @updated_professor.id %>">
+	              		<input type="submit">
+           		</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Professors</title>
+</head>
+<body>
+	<h2>List of available Professors and Subjects taught:</h2>
+		<ul>
+			<% @professors_all.each do |professor| %>
+			<li> <% @subjects_all.each do |subject| %></li>
+				<li><%= professor.id %> - <%= professor.name %> - <a href="/professors/<%= professor.id %>/edit">Edit</a> <a href="professors/<%= professor.id %>/delete">Delete</a>/li>
+				<% end %>
+			<% end %>
+		</ul>
+</body>
+</html>
+
+
+
+

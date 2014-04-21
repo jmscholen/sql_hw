@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Subject::Edit</title>
+</head>
+<body>
+
+  <h2>Edit Subject:</h2>
+         		<form action="/subjects/#{:id}/edit" method="post">
+	         			<input type="hidden" name="_method" value="put">
+	              		<input type="text" id="updated_subject.name" name="updated_subject[name]" placeholder="<%= updated_subject.name %>">
+	              		<input type="text" id="updated_subject_id" name="updated_subject[id]" placeholder="<%= updated_subject.id %>">
+	              		<input type="submit">
+           		</form>
+</body>
+</html>

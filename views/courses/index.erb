@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Courses</title>
+</head>
+<body>
+	<h2>List of available Courses:</h2>
+		<ul>
+			<% @courses_all.each do |course| %>
+				<li><%= course.id %> - <%= course.name %>   <a href="/courses/<%= course.id %>/edit">  Edit  </a> <a href="courses/<%= course.id %>/delete">  Delete </a></li>
+			
+			<% end %>
+		</ul>
+</body>
+</html>
+
+<!--  - <%= subject.name.where(course.subject_id = subject.id) -->
