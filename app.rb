@@ -10,17 +10,21 @@ end
 get '/professors' do
 	@professors_all = Professor.all
 	@subjects_all = Subject.all
+	@courses_all = Course.all
 	erb :"professors/index"
 end
 
 get '/courses' do
 	@courses_all = Course.all
+	@professors_all = Professor.all
+	@subjects_all = Subject.all
 	erb :'/courses/index'
 end
 
 get '/subjects' do
 	@subjects_all = Subject.all
 	@professors_all = Professor.all
+	@courses_all = Course.all
 	erb :'/subjects/index'
 end
 

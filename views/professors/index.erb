@@ -6,9 +6,12 @@
 	<h2>List of available Professors and Subjects taught:</h2>
 		<ul>
 			<% @professors_all.each do |professor| %>
-			<li> <% @subjects_all.each do |subject| %></li>
-				<li><%= professor.id %> - <%= professor.name %> - <a href="/professors/<%= professor.id %>/edit">Edit</a> <a href="professors/<%= professor.id %>/delete">Delete</a>/li>
-				<% end %>
+				<% subject = Subject.find(professor.subject_id) %>
+		
+				<li><%= professor.id %> - <%= professor.name %> - <%= subject.name %> - <a href="/professors/<%= professor.id %>/edit">Edit</a> <a href="professors/<%= professor.id %>/delete">Delete</a>
+				
+				</li>
+				
 			<% end %>
 		</ul>
 </body>

@@ -6,9 +6,10 @@
 	<h2>List of Subjects:</h2>
 		<ul>
 			<% @subjects_all.each do |subject| %>
-			<li> <% @professors_all.each do |professor| %></li>
-				<li><%= subject.id %> - <%= subject.name %> <a href="/subjects/<%= subject.id %>/edit">Edit</a> <a href="subjects/<%= subject.id %>/delete">Delete</a>/li>
-				<% end %>
+			 <% professor = Professor.find(subject.id) %>
+				<li><%= subject.id %> - <%= subject.name %> - <%= professor.name %> - <a href="/subjects/<%= subject.id %>/edit">Edit</a> <a href="subjects/<%= subject.id %>/delete">Delete</a>
+				
+				</li>
 			<% end %>
 		</ul>
 </body>
